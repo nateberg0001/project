@@ -1,0 +1,1 @@
+int select_bands(char* selection, int *amounts);
