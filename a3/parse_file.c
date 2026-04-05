@@ -42,6 +42,11 @@ void fill_pcm(WAV_INFO *wav_info, FILE *fp) {
             j++;
         }
     }
+
+    if ((unsigned int) i != wav_info->num_samples) {
+        printf("Not all audio data was read from the file. Aborting program.\n");
+        exit(1);
+    }
 }
 
 /*
